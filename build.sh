@@ -23,8 +23,8 @@ phpize
 ./configure --enable-snuffleupagus
 make -j$(nproc)
 make install
-rm -r /usr/src/snuffleupagus/
-docker-php-ext-enable snuffleupagus
-cp /build/sp_default.ini /usr/local/etc/php/conf.d/
+rm -rf /usr/src/snuffleupagus/
+# Disable sp by default
+#docker-php-ext-enable snuffleupagus
 
 rm -rf /build
